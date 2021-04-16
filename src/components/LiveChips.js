@@ -26,22 +26,22 @@ export default function LiveChips(props) {
         
         return selectedMetrics.map(metric=>{
             if (metric === 'flareTemp'){
-                return <Chip mVal={metric} label={`${flareTemp}`} />
+                return <Chip key={metric} mVal={metric} label={`${flareTemp}`} />
             }
             if (metric === 'oilTemp'){
-                return <Chip mVal={metric} label={`${oilTemp}`}/>
+                return <Chip key={metric}  mVal={metric} label={`${oilTemp}`}/>
             }
             if (metric === 'waterTemp'){
-                return <Chip mVal={metric} label={`${waterTemp}`}/>
+                return <Chip key={metric} mVal={metric} label={`${waterTemp}`}/>
             }
             if (metric === 'casingPressure'){
-                return <Chip mVal={metric} label={`${casingPressure}`}/>
+                return <Chip key={metric} mVal={metric} label={`${casingPressure}`}/>
             }
             if (metric === 'tubingPressure'){
-                return <Chip mVal={metric} label={`${tubingPressure}`}/>
+                return <Chip key={metric}  mVal={metric} label={`${tubingPressure}`}/>
             }
             if (metric === 'injValveOpen'){
-                return <Chip mVal={metric} label={`${injValveOpen}`}/>
+                return <Chip key={metric} mVal={metric} label={`${injValveOpen}`}/>
             }
             return null
         })

@@ -1,7 +1,5 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import * as crosshair from "chartjs-plugin-crosshair";
-import * as zoom from 'chartjs-plugin-zoom'
 import { Line } from "react-chartjs-2";
 
 export default function Graph(props) {
