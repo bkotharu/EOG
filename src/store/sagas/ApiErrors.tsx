@@ -2,7 +2,7 @@ import { takeEvery, call } from "redux-saga/effects";
 import * as actions from "../actions";
 import { toast } from "react-toastify";
 
-function* apiErrorReceived(action) {
+function* apiErrorReceived(action: any) {
   yield call(toast.error, `Error Received: ${action.error}`);
 }
 
