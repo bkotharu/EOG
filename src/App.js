@@ -49,10 +49,10 @@ const theme = createMuiTheme({
             main: "rgb(226,231,238)"
         }
     }
-});
+} as any);
 
-const App = (props) => {
-    const graphSelected = useSelector(state => state.selectedMetrics);
+const App = (props: any) => {
+    const graphSelected = useSelector((state: any) => state.selectedMetrics);
     const displayTempAxis = graphSelected.includes(
         "flareTemp" || "waterTemp" || "oilTemp"
     );
@@ -61,7 +61,7 @@ const App = (props) => {
     );
     const displayPercentageAxis = graphSelected.includes("injValveOpen");
 
-    const liveSelected = useSelector(state => state.live);
+    const liveSelected = useSelector((state: any) => state.live);
     return (
         <Provider value={client}>
             <MuiThemeProvider theme={theme}>
