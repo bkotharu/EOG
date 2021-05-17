@@ -3,7 +3,7 @@ import * as actions from "../actions";
 
 
 
-function* historicalDataReceived(action) {
+function* historicalDataReceived(action: any) {
     try {
         yield put({ type: actions.HISTORICAL_DATA_SUCCESS, data: action.data });
     } catch (e) {
@@ -15,7 +15,7 @@ function* watchHistoricalData() {
     yield takeEvery(actions.HISTORICAL_DATA_LOADING, historicalDataReceived);
 }
 
-function* currentDataReceived(action) {
+function* currentDataReceived(action: any) {
     try {
         yield put({ type: actions.SUBSCRIPTION_DATA_SUCCESS, data: action.data });
     } catch (e) {
